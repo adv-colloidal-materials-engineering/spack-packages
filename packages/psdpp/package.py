@@ -1,6 +1,6 @@
 from spack import *
 
-class PSDpp(CMakePackage):
+class psdpp(CMakePackage):
     """A C++ library that does cool things."""
 
     homepage = 'https://github.com/adv-colloidal-materials-engineering'
@@ -10,8 +10,8 @@ class PSDpp(CMakePackage):
     version('main', branch='main')
 
     depends_on('pkgconfig', type=('build'))
-    depends_on('voropp')
+    depends_on('voropp', when='@main')
 
-    def cmake_args(self):
-        args = []
-        return args
+#    def cmake_args(self):
+#        args = []
+#        return args
